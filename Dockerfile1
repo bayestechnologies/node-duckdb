@@ -1,0 +1,17 @@
+FROM ubuntu:bionic
+RUN apt update --yes
+RUN apt install cmake --yes
+RUN  apt install gcc-6 g++-6  --yes
+RUN apt install g++ --yes
+RUN apt install build-essential --yes
+RUN  apt install libstdc++-8-dev --yes
+RUN apt install libmpfr-dev --yes
+RUN apt install --reinstall libgcc-6-dev:amd64 libgcc-7-dev:amd64 libgcc-8-dev:amd64 libgcc1:amd64
+RUN ln -s /usr/bin/make /usr/bin/gmake
+RUN apt-get install sqlite3 libsqlite3-dev curl --yes
+RUN apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install libssl1.0.0 nodejs --yes
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt update && apt install yarn

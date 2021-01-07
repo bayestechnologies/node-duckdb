@@ -11,6 +11,7 @@ services:
       GITHUB_TOKEN: $GITHUB_TOKEN
     volumes:
       - .:/root/node-duckdb
+      - ./lib:/opt/lib/:ro
       - ~/.npmrc:/root/.npmrc
       - node-modules:/node_modules
       - yarn-cache:/yarn_cache
