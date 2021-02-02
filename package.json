@@ -1,28 +1,20 @@
 {
-  "name": "node-duckdb",
-  "version": "0.0.59",
+  "name": "@bayes/node-duckdb",
+  "version": "0.0.1",
   "private": false,
   "description": "DuckDB for Node.JS",
   "keywords": [
     "duckdb",
     "sql",
-    "database",
-    "db",
-    "async",
-    "stream"
+    "database"
   ],
-  "homepage": "https://github.com/deepcrawl/node-duckdb#readme",
+  "homepage": "https://github.com/bayestechnologies/node-duckdb#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepcrawl/node-duckdb.git"
+    "url": "https://github.com/bayestechnologies/node-duckdb.git"
   },
-  "license": "MIT",
-  "author": "DeepCrawl",
-  "contributors": [
-    "Dan Forsberg <dforsber@gmail.com> (https://github.com/dforsber)",
-    "Pieter Raubenheimer <pieter.raubenheimer@deepcrawl.com> (https://github.com/jupiter)",
-    "Rostislav Provodenko <rostislav.provodenko@gmail.com> (https://github.com/rostislavdeepcrawl)"
-  ],
+  "license": "UNLICENSED",
+  "author": "Bayes Technologies, Inc.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "binary": {
@@ -39,7 +31,7 @@
     "clang:check": "yarn clang-format --dry-run --Werror addon/**",
     "clang:fix": "yarn clang-format -i addon/**",
     "cleanup:binaries": "rm -rf build prebuilds duckdb",
-    "download-duckdb": "rm -rf duckdb && curl -L https://github.com/cwida/duckdb/archive/v0.2.2.tar.gz > duckdb.tar.gz && tar xf duckdb.tar.gz && mv duckdb-0.2.2 duckdb && rm duckdb.tar.gz",
+    "download-duckdb": "rm -rf duckdb && curl -L https://github.com/cwida/duckdb/archive/v0.2.3.tar.gz > duckdb.tar.gz && tar xf duckdb.tar.gz && mv duckdb-0.2.3 duckdb && rm duckdb.tar.gz",
     "eslint:check": "eslint --ext .js,.json,.ts ./",
     "eslint:fix": "eslint --fix --ext .js,.json,.ts ./",
     "generate-doc": "yarn build:ts && rm -rf temp etc && mkdir etc && yarn api-extractor run --local --verbose &&  yarn api-documenter markdown -i temp -o docs/api && ./docs/replace.sh",
